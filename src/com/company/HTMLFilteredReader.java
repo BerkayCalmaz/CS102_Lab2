@@ -1,12 +1,22 @@
 package com.company;
-
+/**
+ * This class is an extension to MySimpleURLReader which includes further methods.
+ * @author: Berkay Çalmaz
+ * @date: 22.10.2020
+ */
 public class HTMLFilteredReader extends MySimpleURLReader {
 
+    /**
+     * @param url Inherited url
+     */
     public HTMLFilteredReader(String url) {
         super(url);
     }
 
     @Override
+    /**
+     * @return String returns the page content without the html links.
+     */
     public String getPageContents() {
         String main = super.getPageContents();
         //First, anything in between "<script" and "</script>" is deleted.
@@ -46,9 +56,10 @@ public class HTMLFilteredReader extends MySimpleURLReader {
         return main;
     }
 
-
+    /**
+     * @return String returns the unedited content of the page
+     */
     public String getUnfilteredPageContents() {
-
         return super.getPageContents();
     }
 }

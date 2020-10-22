@@ -3,19 +3,32 @@ package com.company;
 
 import java.util.Scanner;
 
-
+/**
+ * This class is an extension to SimpleURLReader which includes further methods.
+ * @author: Berkay Çalmaz
+ * @date: 22.10.2020
+ */
 public class MySimpleURLReader extends SimpleURLReader{
     private String url;
 
+    /**
+     * @param url This param takes the intended url of the website
+     */
     public MySimpleURLReader( String url){
         super(url);
         this.url = url;
     }
 
+    /**
+     * @return String returns the URL of the program.
+     */
     public String getURL(){
         return url;
     }
 
+    /**
+     * @return String returns the name of the URL.
+     */
     public String getName() {
         for( int i = url.length() -1; i > 0; i-- ){
             if( url.charAt(i) == '/' ){ //Starting from the end, checking till the first / comes.
@@ -25,6 +38,9 @@ public class MySimpleURLReader extends SimpleURLReader{
         return "";
     }
 
+    /**
+     * @return int Returns the number of CSS links in the string.
+     */
     public int getNumberOfCSSLinks(){
         Scanner scan = new Scanner( this.getPageContents() );
         String[] lines = new String[getLineCount()];

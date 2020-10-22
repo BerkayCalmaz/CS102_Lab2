@@ -1,9 +1,12 @@
 package com.company;
-
-public class SimpleURLReaderTest {
+/**
+ * This class is to test classes.
+ * @author: Berkay Çalmaz
+ * @date: 22.10.2020
+ */
+public class Test {
 
     public static void main(String[] args) {
-	// write your code here
     MySimpleURLReader myReader1 = new MySimpleURLReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/housman.txt");
     MySimpleURLReader myReader2 = new MySimpleURLReader( "https://scrapethissite.com/pages/simple/" );
     HTMLFilteredReader myReader3 = new HTMLFilteredReader("https://scrapethissite.com/pages/simple/");
